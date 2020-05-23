@@ -52,10 +52,10 @@ function closeApp()
 
 function createShortcut()
 {
-	globalShortcut.register('Shift+1', toggleDevTools);
-	globalShortcut.register('Shift+2', toggleMaximize);
-	globalShortcut.register('Shift+3', toggleMinimize);
-	globalShortcut.register('Shift+4', closeApp);
+	globalShortcut.register('Ctrl+1', toggleDevTools);
+	globalShortcut.register('Ctrl+2', toggleMaximize);
+	globalShortcut.register('Ctrl+3', toggleMinimize);
+	globalShortcut.register('Ctrl+4', closeApp);
 }
 
 app.whenReady().then(createWindow).then(createShortcut);
