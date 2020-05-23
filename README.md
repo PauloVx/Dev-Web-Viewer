@@ -16,6 +16,9 @@
 ### Ctrl+5 - Recarrega a página da rota.
 ### Ctrl+6 - Fecha o programa.
 
+## Configuração
+### Altere as configurações no arquivo config.js
+
 ## Linha de comando
 ### Use --frame na linha de comando para abrir a janela com a borda.
 

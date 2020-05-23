@@ -7,7 +7,7 @@ let win;
 //Window will be frameless without "--frame"
 function hasFrame()
 {
-	if (app.commandLine.hasSwitch('frame')) return true;
+	if (app.commandLine.hasSwitch('frame') || config.frame) return true;
 	return false;
 }
 
