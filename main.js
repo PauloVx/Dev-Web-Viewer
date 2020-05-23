@@ -15,10 +15,10 @@ function createWindow ()
 {
 	// Creating window.
 	win = new BrowserWindow({
-		width: 569,
-		height: 674,
-		x: 791,
-		y: 31,
+		width: config.width,
+		height: config.height,
+		x: config.posX,
+		y: config.posY,
 		frame: hasFrame(),
 		alwaysOnTop: true,
 		webPreferences: {
@@ -26,7 +26,18 @@ function createWindow ()
 		}
 	})
 
+	// Load default page when fail.
+	win.webContents.on("did-fail-load", () => {
+		win.loadFile("view/default.html");
+		setTimeout(connect, 3000);
+	});
+
 	// Load page
+	connect();
+}
+
+function connect() {
+	console.log("Trying to connect");
 	win.loadURL(config.url);
 }
 
@@ -50,6 +61,11 @@ function refreshPage()
 	win.reload();
 }
 
+function reloadPage()
+{
+	win.loadURL(config.url);
+}
+
 function closeApp()
 {
 	win.destroy();
@@ -61,7 +77,8 @@ function createShortcut()
 	globalShortcut.register('Ctrl+2', toggleMaximize);
 	globalShortcut.register('Ctrl+3', toggleMinimize);
 	globalShortcut.register('Ctrl+4', refreshPage);
-	globalShortcut.register('Ctrl+5', closeApp);
+	globalShortcut.register('Ctrl+5', reloadPage);
+	globalShortcut.register('Ctrl+6', closeApp);
 }
 
 app.whenReady().then(createWindow).then(createShortcut);

@@ -13,7 +13,8 @@
 ### Ctrl+2 - Maximiza a janela.
 ### Ctrl+3 - Minimiza a janela.
 ### Ctrl+4 - Atualiza a página.
-### Ctrl+5 - Fecha o programa.
+### Ctrl+5 - Recarrega a página da rota.
+### Ctrl+6 - Fecha o programa.
 
 ## Linha de comando
 ### Use --frame na linha de comando para abrir a janela com a borda.
