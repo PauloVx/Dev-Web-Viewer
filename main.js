@@ -45,6 +45,11 @@ function toggleMinimize()
 	win.isMinimized() ? win.restore() : win.minimize();
 }
 
+function refreshPage()
+{
+	win.reload();
+}
+
 function closeApp()
 {
 	win.destroy();
@@ -55,7 +60,8 @@ function createShortcut()
 	globalShortcut.register('Ctrl+1', toggleDevTools);
 	globalShortcut.register('Ctrl+2', toggleMaximize);
 	globalShortcut.register('Ctrl+3', toggleMinimize);
-	globalShortcut.register('Ctrl+4', closeApp);
+	globalShortcut.register('Ctrl+4', refreshPage);
+	globalShortcut.register('Ctrl+5', closeApp);
 }
 
 app.whenReady().then(createWindow).then(createShortcut);

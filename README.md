@@ -12,7 +12,8 @@
 ### Ctrl+1 - Mostra as Dev Tools.
 ### Ctrl+2 - Maximiza a janela.
 ### Ctrl+3 - Minimiza a janela.
-### Ctrl+4 - Fecha o programa.
+### Ctrl+4 - Atualiza a página.
+### Ctrl+5 - Fecha o programa.
 
 ## Linha de comando
 ### Use --frame na linha de comando para abrir a janela com a borda.
